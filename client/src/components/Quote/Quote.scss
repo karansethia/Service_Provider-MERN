@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Rouge+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital@1&display=swap');
+
+.quote {
+    // width: 1200px;
+    background-image: linear-gradient(#312e72,#272640);
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+  
+    .container {
+      width: 1200px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      h2{
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 36px;
+        color: rgb(255, 255, 255);
+        font-weight: 400;
+    }
+    span{
+        font-family: 'Rouge Script', cursive;
+        font-size: 39px;
+        color: rgb(251, 251, 251);
+      }
+    }
+  }

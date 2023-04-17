@@ -1,0 +1,100 @@
+.featured {
+    height: 650px;
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(#232230,#312e72);
+    color: white;
+  
+    .container {
+      width: 1300px;
+      display: flex;
+      align-items: center;
+  
+      .left {
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+  
+        h1 {
+          font-size: 50px;
+  
+          span {
+            font-style: italic;
+            font-weight: 300 !important;
+          }
+        }
+  
+        .search {
+          background-color: white;
+          border-radius: 5px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          overflow: hidden;
+  
+          .searchInput {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            img {
+              width: 20px;
+              height: 20px;
+              margin: 10px;
+            }
+  
+            input {
+              border: none;
+              outline: none;
+  
+              &::placeholder {
+                color: gray;
+              }
+            }
+          }
+  
+          button {
+            width: 120px;
+            height: 50px;
+            border: none;
+            background-color: #FE7062;
+            color: white;
+            align-self: flex-end;
+            cursor: pointer;
+          }
+        }
+  
+        .popular {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+  
+          span {
+            width: max-content;
+          }
+  
+          button {
+            width: max-content;
+            color: white;
+            border: 1px solid white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            background-color: transparent;
+            font-size: 14px;
+          }
+        }
+      }
+  
+      .right {
+        z-index: 1;
+        height: 100%;
+        margin-top: 15%;
+        transform: translateX(-50px);
+        img {
+          transform: scale(1.3);
+          height: 68%;
+          object-fit: contain;
+        }
+      }
+    }
+  }
