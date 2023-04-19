@@ -53,7 +53,11 @@ const singleServiceSchema = new Schema({
   features: {
     type: [String],
     required: true
-  }
+  },
+  sales: {
+    type: Number,
+    default: 0
+  },
 }    
 ,{
     timestamps: true
