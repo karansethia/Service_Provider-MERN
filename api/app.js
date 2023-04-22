@@ -2,6 +2,7 @@
 import express from "express";
 import mongoose, { mongo } from "mongoose";
 import * as dotenv from 'dotenv';
+import cookieParser from 'cookie-parser'
 
 //! Routes
 
@@ -30,6 +31,7 @@ const connect = async () => {
 
 //todo remove below method and use middleware to accept user data
 app.use(express.json()); //! TEMP CODE FOR TESTING (used for accepting any json data)
+app.use(cookieParser());
 
 
 app.use("/api/auth",authRoute)
