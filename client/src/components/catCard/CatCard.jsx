@@ -1,13 +1,13 @@
 import React from 'react'
 
-const CatCard = () => {
+const CatCard = ({ item }) => {
   return (
     <Link to='/servicelist?cat=technician'>
-    <div className='catcard'>
-        <img src='' alt="" />
-        <span className='desc'></span>
-        <span className='title'></span>
-    </div>
+      <div className='catcard'>
+          <img src={item.img} alt="" />
+          <span className='desc'>{item.desc}</span>
+          <span className='title'>{item.title}</span>
+      </div>
     </Link>
   )
 }
