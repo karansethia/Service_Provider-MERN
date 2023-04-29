@@ -31,13 +31,13 @@ export const cards = [
     },
     {
       id: 6,
-      title: "Social Media",
+      title: "Electrician",
       desc: "Reach more customers",
       img: "https://images.pexels.com/photos/11378899/pexels-photo-11378899.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
     },
     {
       id: 7,
-      title: "SEO",
+      title: "Plumbing",
       desc: "Unlock growth online",
       img: "https://images.pexels.com/photos/4820241/pexels-photo-4820241.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
     },
