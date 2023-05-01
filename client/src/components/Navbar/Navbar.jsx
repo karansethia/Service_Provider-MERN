@@ -59,16 +59,6 @@ export default function Navbar(){
                     )}
                 </div>
             </div>
-            {active || pathname!=='/' && (
-            <>
-                <hr />
-                <div className="menu">
-                    <Link to='/' className="link">Plumber</Link>
-                    <Link to='/' className="link">Electrician</Link>
-                    <Link to='/' className="link">Carpenter</Link>
-                    <Link to='/' className="link">Technician</Link>
-                </div>
-            </>)}
         </div>
 
     )
