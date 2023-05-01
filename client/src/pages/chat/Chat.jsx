@@ -2,12 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Chat.scss";
 
-const Message = () => {
+const Chat = () => {
   return (
-    <div className="message">
+    <div className="chat">
       <div className="container">
         <span className="breadcrumbs">
-          <Link to="/messages">Messages</Link>  John Doe 
+          <Link to="/messages">Messages</Link> Gunjan Barot
         </span>
         <div className="messages">
           <div className="item">
@@ -201,4 +201,4 @@ const Message = () => {
   );
 };
 
-export default Message;
+export default Chat;
