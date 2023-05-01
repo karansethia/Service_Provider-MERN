@@ -36,7 +36,7 @@ export default function SellerDash(){
                     alt=""
                   />
                 </td>
-                <td>Stunning concept art</td>
+                <td>Design a Dining Table</td>
                 <td>59.<sup>99</sup></td>
                 <td>13</td>
                 <td>
@@ -51,7 +51,7 @@ export default function SellerDash(){
                     alt=""
                   />
                 </td>
-                <td>Ai generated concept art</td>
+                <td>Fix water damaged cupboard</td>
                 <td>120.<sup>99</sup></td>
                 <td>41</td>
                 <td>
@@ -66,7 +66,7 @@ export default function SellerDash(){
                     alt=""
                   />
                 </td>
-                <td>High quality digital character</td>
+                <td>Make study table</td>
                 <td>799</td>
                 <td>55</td>
                 <td>
@@ -81,7 +81,7 @@ export default function SellerDash(){
                     alt=""
                   />
                 </td>
-                <td>Illustration hyper realistic painting</td>
+                <td>Make a study table and chair combo</td>
                 <td>119.<sup>99</sup></td>
                 <td>29</td>
                 <td>
@@ -96,7 +96,7 @@ export default function SellerDash(){
                     alt=""
                   />
                 </td>
-                <td>Original ai generated digital art</td>
+                <td>Wood Polish with timber</td>
                 <td>59.<sup>99</sup></td>
                 <td>34</td>
                 <td>
@@ -111,7 +111,7 @@ export default function SellerDash(){
                     alt=""
                   />
                 </td>
-                <td>Text based ai generated art</td>
+                <td>Fix Dining table and replace top</td>
                 <td>110.<sup>99</sup></td>
                 <td>16</td>
                 <td>
