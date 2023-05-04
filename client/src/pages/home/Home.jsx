@@ -21,21 +21,13 @@ export default function Home() {
             <div className="features">
                 <div className="container">
                     <div className="item">
-                        <h1>A whole world of freelance talent at your fingertips</h1>
-                        <div className="title">
-                            <img src="./img/check.png" alt="" />
-                            The best for every budget
-                        </div>
-                        <p>
-                            Find high-quality services at every price point. No hourly rates,
-                            just project-based pricing.
-                        </p>
+                        <h1>A whole world of service providers at your fingertips</h1>
                         <div className="title">
                             <img src="./img/check.png" alt="" />
                             Quality work done quickly
                         </div>
                         <p>
-                            Find the right freelancer to begin working on your project within
+                            Find the right server to begin working on your project within
                             minutes.
                         </p>
                         <div className="title">
@@ -56,7 +48,9 @@ export default function Home() {
                         </p>
                     </div>
                     <div className="item">
-                        <video src="./img/video.mp4" controls />
+                        <video>
+                            <source src="/public/img/video.mp4" type="video/mp4" autoPlay loop />
+                        </video>
                     </div>
                 </div>
             </div>
@@ -68,7 +62,7 @@ export default function Home() {
                             Iksan <i>business</i>
                         </h1>
                         <h1>
-                            A business solution designed for <i>teams</i>
+                            A business solution designed for <i>all Service Providers</i>
                         </h1>
                         <p>
                             Upgrade to a curated experience packed with tools and benefits,
@@ -76,7 +70,7 @@ export default function Home() {
                         </p>
                         <div className="title">
                             <img src="./img/check.png" alt="" />
-                            Connect to freelancers with proven business experience
+                            Connect to Service Providers with proven business experience
                         </div>
 
                         <div className="title">
@@ -88,7 +82,7 @@ export default function Home() {
                             <img src="./img/check.png" alt="" />
                             Manage teamwork and boost productivity with one powerful workspace
                         </div>
-                        <button>Explore Fiverr Business</button>
+                        <button>Explore Iksan Business</button>
                     </div>
                     <div className="item">
                         <img

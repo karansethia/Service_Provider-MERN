@@ -3,6 +3,7 @@ import express from "express";
 import mongoose, { mongo } from "mongoose";
 import * as dotenv from 'dotenv';
 import cookieParser from 'cookie-parser'
+import cors from 'cors'
 
 //! Routes
 
@@ -28,12 +29,18 @@ const connect = async () => {
     }
 }
 
-
-//todo remove below method and use middleware to accept user data
-app.use(express.json()); //! TEMP CODE FOR TESTING (used for accepting any json data)
+app.use((req, res, next) => {
+    res.append('Access-Control-Allow-Origin', ['*']);
+    res.append('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+    res.append('Access-Control-Allow-Headers', 'Content-Type');
+    res.append('Access-Control-Allow-Credentials', 'true');
+    next();
+});
+app.use(cors({ origin: 'http://localhost:5173', credential:true}))
+app.use(express.json()); //? used for accepting any json data)
 app.use(cookieParser());
 
-
+//Routes
 app.use("/api/auth",authRoute)
 app.use("/api/users", userRoutes);
 app.use("/api/gigs", singleServiceRoute);
@@ -41,6 +48,14 @@ app.use("/api/orders", orderRoute);
 app.use("/api/conversations", conversationRoute);
 app.use("/api/messages", messageRoute);
 app.use("/api/reviews", reviewRoute);
+
+//error handling
+app.use((err, req, res, next)=>{
+    const errorStatus = err.status || 500
+    const errorMessage = err.message || "Something went wrong"
+
+    return res.status(errorStatus).send(errorMessage);
+})
 
 app.listen(3100,()=>{
     connect()

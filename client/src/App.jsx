@@ -9,6 +9,10 @@ import Orders from './pages/orders/Orders'
 import SellerDash from './pages/sellerDash/SellerDash'
 import ServiceList from './pages/serviceList/ServiceList'
 import SingleService from './pages/singleService/SingleService'
+import Login from "./pages/login/Login"
+import Register from "./pages/register/Register"
+
+
 import {
   createBrowserRouter,
   RouterProvider,
@@ -66,6 +70,14 @@ function App() {
           path: '/chat/:id',
           element: <Chat />
         },
+        {
+          path: "/register",
+          element: <Register />,
+        },
+        {
+          path: "/login",
+          element: <Login />,
+        }
       ]
     },
   ]);

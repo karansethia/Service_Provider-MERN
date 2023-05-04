@@ -1,8 +1,9 @@
 import User from '../models/user.model.js'
 import bcrypt from 'bcrypt'
 import jwt from 'jsonwebtoken';
+import { createError } from '../utils/createError.js';
 
-export const register = async (req,res)=> {
+export const register = async (req,res, next)=> {
     try {
         // const newUser = new User({
         //     username: "Karan",
@@ -18,12 +19,16 @@ export const register = async (req,res)=> {
         await newUser.save();
         res.status(201).send('user has been created'); 
     } catch (error) {
-        res.status(500).send(error)
+        next(error)
     }
 
 }
 export const logout = async (req,res)=> {
     try {
+        res.clearCookie('accessToken',{
+            sameSite: "none",  //? None because our react frontend and express backend do not work on the same localhost => different ports
+            secure: true
+        }).status(200).send("User has been logged out")
         
     } catch (error) {
         res.status(500).send('<h4>Something went wrong</h4>',error);
@@ -31,16 +36,17 @@ export const logout = async (req,res)=> {
     }
 
 }
-export const login = async (req,res)=> {
+export const login = async (req,res, next)=> {
     try {
 
         //* Checking if user exists => db.collec.findOne({key:value})
         const user = await User.findOne({username: req.body.username});
-        if(!user) return res.status(404).send('User does not exist');
+
+        if(!user) return next(createError(404, "User not found"));
 
         //* comparing stored password to entered password
         const isCorrect = bcrypt.compareSync(req.body.password, user.password);
-        if(!isCorrect) return res.status(400).send('Wrong Password');
+        if(!isCorrect) return next(createError(400,"Wrong Password entered"));
 
         //* Tokens from jwt
         const token = jwt.sign({
@@ -56,7 +62,7 @@ export const login = async (req,res)=> {
         httpOnly: true,
       }).status(200).send(info); 
     } catch (error) {
-        res.status(500).send('Something went wrong, username or password incorrect');
+        next(createError(500,"Something went wrong, Username or Password Incorrect"))
     }
 
 }
