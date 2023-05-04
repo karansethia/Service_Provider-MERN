@@ -8,16 +8,15 @@ function Footer() {
         <div className="top">
           <div className="item">
             <h2>Categories</h2>
-            <span>Graphics & Design</span>
-            <span>Digital Marketing</span>
-            <span>Writing & Translation</span>
-            <span>Video & Animation</span>
-            <span>Music & Audio</span>
-            <span>Programming & Tech</span>
-            <span>Data</span>
-            <span>Business</span>
-            <span>Lifestyle</span>
-            <span>Photography</span>
+            <span>Electrician</span>
+            <span>Plumbing</span>
+            <span>Computer Technician</span>
+            <span>Gadget Repair</span>
+            <span>Wall Painter</span>
+            <span>Artwork Painting</span>
+            <span>Home Cleaning</span>
+            <span>Pest Control</span>
+            <span>Technician</span>
             <span>Sitemap</span>
           </div>
           <div className="item">
@@ -44,20 +43,14 @@ function Footer() {
             <span>Forum</span>
             <span>Events</span>
             <span>Blog</span>
-            <span>Influencers</span>
             <span>Affiliates</span>
-            <span>Podcast</span>
             <span>Invite a Friend</span>
-            <span>Become a Seller</span>
+            <span>Become a Service Provider</span>
             <span>Community Standards</span>
           </div>
           <div className="item">
             <h2>More From Iksan</h2>
             <span>Iksan Business</span>
-            <span>Iksan Pro</span>
-            <span>Iksan Logo Maker</span>
-            <span>Iksan Guides</span>
-            <span>Get Inspired</span>
             <span>Iksan Select</span>
             <span>ClearVoice</span>
             <span>Iksan Workspace</span>

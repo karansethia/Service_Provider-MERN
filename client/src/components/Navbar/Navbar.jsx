@@ -47,7 +47,7 @@ export default function Navbar(){
                     </Link>
                 </div>
                 <div className="links">
-                    <span>Services</span>
+                    <Link className="link" to='/serviceList'>Services</Link>
                     <span>Explore</span>
                     <span>Dashboard</span>
                     {!currentUser?.isSeller && <span>Become a Seller</span>}
@@ -60,10 +60,10 @@ export default function Navbar(){
                   {currentUser.isSeller && (
                     <>
                       <Link className="link" to="/mygigs">
-                        Gigs
+                        My Services
                       </Link>
-                      <Link className="link" to="/add">
-                        Add New Gig
+                      <Link className="link" to="/addService">
+                        Add New Service
                       </Link>
                     </>
                   )}

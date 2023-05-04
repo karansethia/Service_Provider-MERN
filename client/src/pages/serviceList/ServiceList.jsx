@@ -7,8 +7,8 @@ import downArrow from '../../../public/img/down-arrow.png'
 
 export default function ServiceList(){
 
-    const [open, setOpen] = useState('sales') ;   
-    const [sort, setSort] = useState('Frequently booked');
+    const [open, setOpen] = useState(false) ;   
+    const [sort, setSort] = useState('sales');
     
     const reSort = type =>{
         setSort(type);
@@ -19,7 +19,7 @@ export default function ServiceList(){
         <div className="ServiceList">
             <div className="container">
                 <span className="breadcrumbs">
-                    IKSAN . TECHNICIAN
+                    IKSAN &gt; TECHNICIAN
                 </span>
                 <h1>TECHNICIAN</h1>
                 <p>Explore Iksan's best and certified technicians</p>
