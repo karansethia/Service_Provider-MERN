@@ -11,7 +11,7 @@ export default function Register() {
     email: "",
     password: "",
     img: "",
-    country: "",
+    city: "",
     isSeller: false,
     desc: "",
   });
