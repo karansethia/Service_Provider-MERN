@@ -10,18 +10,7 @@ export default function Navbar(){
     const [open, setOpen] = useState(false);
     const navigate = useNavigate()
 
-    const {pathname} = useLocation()
-
-    // const isActive = () =>{
-    //     window.scrollY > 10 ? setActive(true) : setActive(false);
-    // }
-    // useEffect(()=>{
-    //     window.addEventListener('scroll', isActive);
-
-    //     return () => {
-    //         window.removeEventListener('scroll',isActive);
-    //     }
-    // },[]);
+    const {pathname} = useLocation();
 
 
     //? Getting user details from local storage
